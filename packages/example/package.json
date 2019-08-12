@@ -1,0 +1,38 @@
+{
+  "name": "@gateway-shared/example",
+  "version": "1.0.0",
+  "author": "Yuvaraj Thiagarajan",
+  "dependencies": {
+    "@gateway-shared/components": "1.0.0",
+    "@gateway-shared/functions": "1.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^24.0.17",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "babel-loader": "^8.0.6",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "scripts": {
+    "clean:build": "rm -fr ./dist",
+    "build": "webpack-cli",
+    "start": "webpack-dev-server",
+    "prettier": "prettier --write './src/**/*.ts?(x)'",
+    "lint": "tslint --fix './src/**/*.ts?(x)'",
+    "test": "jest"
+  }
+}

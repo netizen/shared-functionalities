@@ -1,0 +1,33 @@
+{
+  "name": "gateway-shared",
+  "version": "1.0.0",
+  "author": "Yuvaraj Thiagarajan",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "husky": "^3.0.3",
+    "lerna": "^3.16.4",
+    "lint-staged": "^9.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,md}": ["prettier --write", "git add"]
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean:build": "lerna run clean:build",
+    "clean": "lerna clean",
+    "build": "lerna run build",
+    "lint": "lerna run lint",
+    "prettier": "lerna run prettier",
+    "verify": "yarn clean -y && yarn clean:build && yarn bootstrap && yarn build && yarn lint && yarn prettier",
+    "example": "lerna run --scope @gateway-shared/example start --stream",
+    "components": "lerna run --scope @gateway-shared/components storybook"
+  }
+}
