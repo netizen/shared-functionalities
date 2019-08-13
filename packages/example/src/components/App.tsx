@@ -39,7 +39,7 @@ class App extends React.Component<{}, IState> {
             }}
           >
             <LabelValue
-              label={`Counter ${idx}`}
+              label={`Operand ${idx}`}
               value={counterValue}
               valueTestId={`value-test-id-${idx}`}
             />
