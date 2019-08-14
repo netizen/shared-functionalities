@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Button, LabelValue, Paper } from '@gateway-shared/components';
-import { multiply, sum } from '@gateway-shared/functions';
+import abstractions, { multiply, sum } from '@gateway-shared/abstractions';
 
 interface IState {
   counters: number[];
@@ -64,10 +64,16 @@ class App extends React.Component<{}, IState> {
             margin: 16,
           }}
         >
-          <LabelValue label={'Sum'} value={sum(counters[0], counters[1])} />
+          <LabelValue
+            label={'Sum'}
+            value={abstractions.isomorphic.utils.add(counters[0], counters[1])}
+          />
           <LabelValue
             label={'Multiply'}
-            value={multiply(counters[0], counters[1])}
+            value={abstractions.isomorphic.utils.multiply(
+              counters[0],
+              counters[1],
+            )}
           />
         </Paper>
       </div>

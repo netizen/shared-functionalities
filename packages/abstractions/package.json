@@ -1,0 +1,14 @@
+{
+  "name": "@gateway-shared/abstractions",
+  "version": "1.0.0",
+  "author": "Yuvaraj Thiagarajan",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "clean:build": "rm -rf ./lib",
+    "build": "tsc",
+    "test": "jest",
+    "prettier": "prettier --write './src/**/*.ts?(x)'",
+    "lint": "tslint --fix './src/**/*.ts?(x)'"
+  }
+}

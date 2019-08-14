@@ -4,33 +4,14 @@
   "author": "Yuvaraj Thiagarajan",
   "dependencies": {
     "@gateway-shared/components": "1.0.0",
-    "@gateway-shared/functions": "1.0.0",
+    "@gateway-shared/abstractions": "1.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
-    "@types/enzyme": "^3.10.3",
-    "@types/enzyme-adapter-react-16": "^1.0.5",
-    "@types/jest": "^24.0.17",
     "@types/react": "^16.9.1",
-    "@types/react-dom": "^16.8.5",
-    "babel-loader": "^8.0.6",
-    "html-webpack-plugin": "^3.2.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.4.0",    
-    "jest": "^24.8.0",
-    "prettier": "^1.18.2",
-    "typescript": "^3.5.3",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0"
+    "@types/react-dom": "^16.8.5"
   },
   "scripts": {
     "clean:build": "rm -fr ./dist",
