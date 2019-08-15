@@ -1,7 +1,8 @@
 import React from 'react';
 
+import abstractions from '@gateway-shared/abstractions';
+
 import { Button, LabelValue, Paper } from '@gateway-shared/components';
-import abstractions, { multiply, sum } from '@gateway-shared/abstractions';
 
 interface IState {
   counters: number[];
