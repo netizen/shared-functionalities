@@ -6,7 +6,9 @@ import {
   Button,
   Card,
   CardPrimaryAction,
-  FormField,
+  Grid,
+  GridCell,
+  Typography,
 } from '@gateway-shared/components';
 
 interface IState {
@@ -21,7 +23,6 @@ class App extends React.Component<{}, IState> {
   incrementCounter = (counterIndex: number, toAdd: number) => {
     this.setState((prevState) => {
       const prevCounters = prevState.counters;
-
       return {
         counters: Object.assign([], prevCounters, {
           [counterIndex]: prevCounters[counterIndex] + toAdd,
@@ -32,17 +33,18 @@ class App extends React.Component<{}, IState> {
 
   render() {
     const { counters } = this.state;
+
     return (
-      <div style={{ display: 'flex' }}>
+      <Grid>
         {counters.map((counterValue, idx) => (
-          <div>
+          <GridCell span={2} key={idx}>
             <Card>
               <CardPrimaryAction>
-                <FormField>
-                  <label>{`Operand ${idx}`} = </label>
-                  <span>{counterValue}</span>
-                </FormField>
-                <div style={{ display: 'flex', marginTop: 16 }}>
+                <Typography use={'headline6'}>
+                  {`Operand ${idx} = `}
+                  {counterValue}
+                </Typography>
+                <div>
                   <Button onClick={() => this.incrementCounter(idx, 1)}>
                     Increase {idx}
                   </Button>
@@ -54,30 +56,30 @@ class App extends React.Component<{}, IState> {
                 </div>
               </CardPrimaryAction>
             </Card>
-          </div>
+          </GridCell>
         ))}
-        <div>
+        <GridCell span={2}>
           <Card>
             <CardPrimaryAction>
-              <FormField>
-                <label>{'Sum'} = </label>
-                <span>
+              <div>
+                <Typography use={'headline6'}>{'Sum = '}</Typography>
+                <Typography use={'headline6'}>
                   {abstractions.isomorphic.utils.add(counters[0], counters[1])}
-                </span>
-              </FormField>
-              <FormField>
-                <label>{'Multiply'} = </label>
-                <span>
+                </Typography>
+              </div>
+              <div>
+                <Typography use={'headline6'}>{'Multiply = '}</Typography>
+                <Typography use={'headline6'}>
                   {abstractions.isomorphic.utils.multiply(
                     counters[0],
                     counters[1],
                   )}
-                </span>
-              </FormField>
+                </Typography>
+              </div>
             </CardPrimaryAction>
           </Card>
-        </div>
-      </div>
+        </GridCell>
+      </Grid>
     );
   }
 }

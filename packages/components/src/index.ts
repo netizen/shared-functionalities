@@ -8,3 +8,5 @@ export {
   CardMedia,
   CardPrimaryAction,
 } from './Card';
+export { Grid, GridInner, GridCell } from './Grid';
+export { default as Typography } from './Typography';
