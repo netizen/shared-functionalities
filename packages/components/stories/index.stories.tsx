@@ -8,6 +8,6 @@ storiesOf('Components', module).add('Button', () => (
       alert('Button got clicked!');
     }}
   >
-    ClickMe!
+    I am a button!
   </Button>
 ));

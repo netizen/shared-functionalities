@@ -44,16 +44,12 @@ class App extends React.Component<{}, IState> {
                   {`Operand ${idx} = `}
                   {counterValue}
                 </Typography>
-                <div>
-                  <Button onClick={() => this.incrementCounter(idx, 1)}>
-                    Increase {idx}
-                  </Button>
-                </div>
-                <div>
-                  <Button onClick={() => this.incrementCounter(idx, -1)}>
-                    Decrease {idx}
-                  </Button>
-                </div>
+                <Button onClick={() => this.incrementCounter(idx, 1)}>
+                  Increase
+                </Button>
+                <Button onClick={() => this.incrementCounter(idx, -1)}>
+                  Decrease
+                </Button>
               </CardPrimaryAction>
             </Card>
           </GridCell>
