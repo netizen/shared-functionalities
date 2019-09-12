@@ -52,7 +52,7 @@
     "lint": "lerna run lint",
     "prettier": "lerna run prettier",
     "verify": "yarn clean -y && yarn clean:build && yarn bootstrap && yarn build && yarn lint && yarn prettier",
-    "example": "lerna run --scope @shared-functionalities/example start --stream",
+    "application": "lerna run --scope @shared-functionalities/application start --stream",
     "components": "lerna run --scope @shared-functionalities/components storybook"
   }
 }

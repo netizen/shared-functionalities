@@ -1,4 +1,4 @@
-module.exports =  {
+module.exports = {
   // presets run in reverse order
   presets: [
     '@babel/preset-env',
