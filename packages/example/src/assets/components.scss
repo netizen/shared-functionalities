@@ -1,0 +1,8 @@
+.mdc-button {
+    @include mdc-button-shape-radius(0%);
+}
+
+.mdc-card {
+  width: 100%;
+  color: red;
+}

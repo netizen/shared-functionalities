@@ -1,6 +1,6 @@
 {
-  "name": "@gateway-shared/abstractions",
-  "version": "1.0.0",
+  "name": "@shared-functionalities/abstractions",
+  "version": "1.1.0",
   "author": "Yuvaraj Thiagarajan",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",

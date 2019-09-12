@@ -1,28 +1,29 @@
 {
-  "name": "@gateway-shared/components",
-  "version": "1.0.0",
+  "name": "@shared-functionalities/components",
+  "version": "1.1.0",
   "author": "Yuvaraj Thiagarajan",
   "main": "lib/index.js",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "@rmwc/button": "^5.6.0",
-    "@rmwc/formfield": "^5.6.0",
-    "@rmwc/card": "^5.6.0",
-    "@rmwc/grid": "^5.6.0",
-    "@rmwc/typography": "^5.6.0"
+    "@rmwc/button": "^5.7.0",
+    "@rmwc/formfield": "^5.7.0",
+    "@rmwc/card": "^5.7.0",
+    "@rmwc/grid": "^5.7.0",
+    "@rmwc/typography": "^5.7.0"
   },
   "devDependencies": {
     "@storybook/addon-info": "^5.1.11",
     "@storybook/preset-scss": "^1.0.2",
     "@storybook/react": "^5.1.11",
     "@types/classnames": "^2.2.9",
-    "@types/react": "^16.9.1",
-    "@types/react-dom": "^16.8.5",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
     "@types/storybook__react": "^4.0.2",
     "css-loader": "^3.2.0",
+    "node-sass": "^4.12.0",
     "@rmwc/types": "^5.6.0",
-    "sass-loader": "^7.2.0",
+    "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0"
   },
   "scripts": {
@@ -30,7 +31,7 @@
     "build": "tsc",
     "test": "jest",
     "lint": "tslint --fix './src/**/*.ts?(x)'",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 4000 -c .storybook",
     "prettier": "prettier --write './src/**/*.ts?(x)'"
   }
 }

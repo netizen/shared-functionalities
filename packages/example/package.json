@@ -1,17 +1,17 @@
 {
-  "name": "@gateway-shared/example",
-  "version": "1.0.0",
+  "name": "@shared-functionalities/example",
+  "version": "1.1.0",
   "author": "Yuvaraj Thiagarajan",
   "dependencies": {
-    "@gateway-shared/components": "1.0.0",
-    "@gateway-shared/abstractions": "1.0.0",
+    "@shared-functionalities/components": "1.1.0",
+    "@shared-functionalities/abstractions": "1.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
-    "@types/react": "^16.9.1",
-    "@types/react-dom": "^16.8.5"
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0"
   },
   "scripts": {
     "clean:build": "rm -fr ./dist",

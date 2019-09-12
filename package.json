@@ -1,37 +1,37 @@
 {
-  "name": "gateway-shared",
-  "version": "1.0.0",
+  "name": "shared-functionalities",
+  "version": "1.1.0",
   "author": "Yuvaraj Thiagarajan",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
-    "husky": "^3.0.3",
-    "lerna": "^3.16.4",
-    "lint-staged": "^9.2.1",
-    "@babel/core": "^7.5.5",
-    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.6.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",    
-    "@babel/preset-typescript": "^7.3.3",    
-    "@types/jest": "^24.0.17",
-    "jest": "^24.8.0",
-    "prettier": "^1.18.2",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
     "@types/enzyme": "^3.10.3",
-    "@types/enzyme-adapter-react-16": "^1.0.5"    ,
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.18",
+    "babel-loader": "^8.0.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
-    "react-docgen-typescript-loader": "^3.1.1",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0",
-    "html-webpack-plugin": "^3.2.0"    
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "lerna": "^3.16.4",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "react-docgen-typescript-loader": "^3.2.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
   },
   "husky": {
     "hooks": {
@@ -39,7 +39,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx,css,md}": ["prettier --write", "git add"]
+    "*.{js,ts,tsx,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
@@ -49,7 +52,7 @@
     "lint": "lerna run lint",
     "prettier": "lerna run prettier",
     "verify": "yarn clean -y && yarn clean:build && yarn bootstrap && yarn build && yarn lint && yarn prettier",
-    "example": "lerna run --scope @gateway-shared/example start --stream",
-    "components": "lerna run --scope @gateway-shared/components storybook"
+    "example": "lerna run --scope @shared-functionalities/example start --stream",
+    "components": "lerna run --scope @shared-functionalities/components storybook"
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import abstractions from '@gateway-shared/abstractions';
+import abstractions from '@shared-functionalities/abstractions';
 
 import {
   Button,
@@ -9,7 +9,7 @@ import {
   Grid,
   GridCell,
   Typography,
-} from '@gateway-shared/components';
+} from '@shared-functionalities/components';
 
 interface IState {
   counters: number[];
@@ -44,10 +44,10 @@ class App extends React.Component<{}, IState> {
                   {`Operand ${idx} = `}
                   {counterValue}
                 </Typography>
-                <Button onClick={() => this.incrementCounter(idx, 1)}>
+                <Button raised onClick={() => this.incrementCounter(idx, 1)}>
                   Increase
                 </Button>
-                <Button onClick={() => this.incrementCounter(idx, -1)}>
+                <Button outlined onClick={() => this.incrementCounter(idx, -1)}>
                   Decrease
                 </Button>
               </CardPrimaryAction>
@@ -58,13 +58,13 @@ class App extends React.Component<{}, IState> {
           <Card>
             <CardPrimaryAction>
               <div>
-                <Typography use={'headline6'}>{'Sum = '}</Typography>
+                <Typography use={'headline6'}>{'Addition = '}</Typography>
                 <Typography use={'headline6'}>
                   {abstractions.isomorphic.utils.add(counters[0], counters[1])}
                 </Typography>
               </div>
               <div>
-                <Typography use={'headline6'}>{'Multiply = '}</Typography>
+                <Typography use={'headline6'}>{'Multiplication = '}</Typography>
                 <Typography use={'headline6'}>
                   {abstractions.isomorphic.utils.multiply(
                     counters[0],

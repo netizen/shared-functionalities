@@ -1,0 +1,18 @@
+// Import global Material Theme
+@import "theme";
+
+// Import Google Material Design Components
+@import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
+@import "@material/typography/mdc-typography";
+
+@import "@material/theme/color-palette.scss";
+@import "@material/theme/functions.scss";
+@import "@material/theme/mixins";
+
+@import "@material/shape/functions.scss";
+@import "@material/ripple/mixins";
+@import "@material/rtl/mixins";
+
+// Import global component styling
+@import "components";

@@ -4,6 +4,7 @@ import { Button } from '../src';
 
 storiesOf('Components', module).add('Button', () => (
   <Button
+    raised
     onClick={() => {
       alert('Button got clicked!');
     }}

@@ -17,20 +17,33 @@ module.exports = {
         use: 'babel-loader',
         test: /\.tsx?$/,
         exclude: /node_modules/,
-      }, {
-        test: /\.css$/,
+      },
+      {
+        test: /\.s?css$/,
         use: [
-          'style-loader',
-          'css-loader'
-        ]
-      }
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+          {
+            loader: 'sass-loader', // compiles Sass to CSS
+            options: {
+              sassOptions: {
+                includePaths: [
+                  path.join(path.dirname(module.filename), 'node_modules'),
+                ],
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 9000,
+    port: 8000,
   },
-  plugins: [
-    new HtmlWebpackPlugin({ template: './src/assets/index.html' }),
-  ],
+  plugins: [new HtmlWebpackPlugin({ template: './src/assets/index.html' })],
 };
