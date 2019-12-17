@@ -1,13 +1,24 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended"
+        "tslint:recommended",
+        "tslint-config-prettier"
     ],
     "jsRules": {},
     "rules": {
-        "quotemark": [2, "single"],
-        "semicolon": [true, "always", "ignore-bound-class-methods"],
-        "member-access": [false]
+        "quotemark": [
+            2,
+            "single"
+        ],
+        "semicolon": [
+            true,
+            "always",
+            "ignore-bound-class-methods"
+        ],
+        "member-access": [
+            false
+        ],
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }
